@@ -31,22 +31,19 @@ export default function RegViewOne(props) {
                     <Button variant="registration-form-btn" onClick={() => {props.changeView(2)}}>
                         Continue
                     </Button>
-                    {/* <Button variant="registration-form-btn" onClick={() => {props.changeView('increase')}}>
-                        Continue
-                    </Button> */}
                 </div>
                 <div className="progress-div">
                     <div className="progress-one-div">
-                        <div id="progress-one"></div>
+                        <div className="progress-circle current"></div>
                         <h5 className="progress-div-text active">User Information</h5>
                     </div>
                     <div className="progress-two-div">
-                        <div id="progress-two"></div>
+                        <div className="progress-circle progress-circle-middle"></div>
                         <hr />
                         <h5 className="progress-div-text disabled">Organization Information</h5>
                     </div>
                     <div className="progress-three-div">
-                        <div id="progress-three"></div>
+                        <div className="progress-circle"></div>
                         <h5 className="progress-div-text disabled">Review Information</h5>
                     </div>
                 </div>

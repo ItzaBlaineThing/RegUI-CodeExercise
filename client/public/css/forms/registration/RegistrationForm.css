@@ -58,12 +58,24 @@
     text-align: center;
 }
 
-.btn-registration-form-btn {
-    background-color: #5D85B4;
+.registration-form-btn-container {
+    /* background-color: palegreen; */
+    padding: 0 15rem;
+}
+
+.btn-registration-form-btn, .btn-registration-form-btn-alt {
     color: #FFFFFF;
     margin: 1rem 0 2rem;
-    padding: 0.3rem 5rem;
+    min-width: 12rem;
     border-radius: 5px;
+}
+
+.btn-registration-form-btn {
+    background-color: #5D85B4;
+}
+
+.btn-registration-form-btn-alt {
+    background-color: #77797B;
 }
 
 .progress-div {
@@ -99,8 +111,8 @@
     position: relative;
 }
 
-#progress-one {
-    background-color: #5D85B4;
+.progress-circle {
+    background-color: #FFFFFF;
     height: 20px;
     width: 20px;
     border: 1px solid #5F5A5A;
@@ -108,23 +120,18 @@
     margin-bottom: 0.5rem;
 }
 
-#progress-two {
-    background-color: #ffffff;
-    height: 20px;
-    width: 20px;
-    border: 1px solid #5F5A5A;
-    border-radius: 50px;
+.progress-circle-middle {
     margin: 0 15rem;
     position: relative;
     z-index: 2;
 }
 
-#progress-three {
-    background-color: #FFFFFF;
-    height: 20px;
-    width: 20px;
-    border: 1px solid #5F5A5A;
-    border-radius: 50px;
+.current {
+    background-color: #5D85B4;
+}
+
+.visited {
+    background-color: #F0A83A;
 }
 
 hr {

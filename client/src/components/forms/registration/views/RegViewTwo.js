@@ -1,6 +1,9 @@
 import React from 'react';
 
 // Import React-Bootstrap
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
@@ -26,25 +29,33 @@ export default function RegViewTwo(props) {
                     <Form.Control type="text" className="registration-form-input" placeholder="NPI Number" name="npiNumber" onChange={props.handleChange} value={props.form.npiNumber} />
                 </Form.Group>
                 <div className="registration-form-btn-div">
-                    <Button variant="registration-form-btn" type="button" onClick={() => {props.changeView(1)}}>
-                        Back
-                    </Button>
-                    <Button variant="registration-form-btn" type="button" onClick={() => {props.changeView(3)}}>
-                        Continue
-                    </Button>
+                    <Container className="registration-form-btn-container">
+                        <Row>
+                            <Col>
+                                <Button variant="registration-form-btn-alt" type="button" onClick={() => {props.changeView(1)}}>
+                                    Back
+                                </Button>
+                            </Col>
+                            <Col>
+                                <Button variant="registration-form-btn" type="button" onClick={() => {props.changeView(3)}}>
+                                    Continue
+                                </Button>
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
                 <div className="progress-div">
                     <div className="progress-one-div">
-                        <div id="progress-one"></div>
+                        <div className="progress-circle visited"></div>
                         <h5 className="progress-div-text disabled">User Information</h5>
                     </div>
                     <div className="progress-two-div">
-                        <div id="progress-two"></div>
+                        <div className="progress-circle progress-circle-middle current"></div>
                         <hr />
                         <h5 className="progress-div-text active">Organization Information</h5>
                     </div>
                     <div className="progress-three-div">
-                        <div id="progress-three"></div>
+                        <div className="progress-circle"></div>
                         <h5 className="progress-div-text disabled">Review Information</h5>
                     </div>
                 </div>
