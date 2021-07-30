@@ -17,15 +17,14 @@ export default function RegistrationForm() {
         email: "",
         address: "",
         phoneNumber: "",
-        npiNumber: "",
-        currentView: 1
+        npiNumber: ""
     });
 
     // Function to handle changes and update local state values
     function handleChange(event) {
         // Destructure the name and value of the event.target
         const {name, value} = event.target;
-        // Calling setForm to update the local state value for form.name
+        // Calling setForm to update the local state value for form.[key]
         setForm((prevValue) => {
             return {
                 // Returns previous values
@@ -36,19 +35,22 @@ export default function RegistrationForm() {
         });
     }
 
-    // var view1 = false;
+    // Setting state to track the currentView
+    const [currentView, setCurrentView] = useState(1);
 
-    // if (form.view === 1) {
-    //     view1 = true;
-    // }
+    // Function to update the currentView
+    function changeView(viewSelected) {
+        // Takes in the new view value and updates the state for currentView which determines rendering
+        setCurrentView(viewSelected);
+    }
 
     return (
         <div className="registration-form-div">
             <Form className="registration-form">
                 <h2 id="brand">Availity</h2>
-                <RegViewOne form={form} handleChange={handleChange} />
-                {/* <RegViewTwo form={form} handleChange={handleChange} /> */}
-                <RegViewThree form={form} handleChange={handleChange} />
+                <RegViewOne form={form} handleChange={handleChange} currentView={currentView} changeView={changeView} />
+                <RegViewTwo form={form} handleChange={handleChange} currentView={currentView} changeView={changeView} />
+                <RegViewThree form={form} handleChange={handleChange} currentView={currentView} changeView={changeView} />
             </Form>
         </div>
     )

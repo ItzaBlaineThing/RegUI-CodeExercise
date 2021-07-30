@@ -6,7 +6,9 @@ import Button from 'react-bootstrap/Button';
 
 export default function RegViewOne(props) {
 
-    if (props.form.currentView != 1) {
+    console.log(props);
+
+    if (props.currentView !== 1) {
         return null
     } else {
         return (
@@ -26,9 +28,12 @@ export default function RegViewOne(props) {
                     <Form.Control type="email" className="registration-form-input" placeholder="Email" name="email" onChange={props.handleChange} value={props.form.email} />
                 </Form.Group>
                 <div className="registration-form-btn-div">
-                    <Button variant="registration-form-btn" type="button" onClick={props.handleChange} value={props.form.view + 1}>
+                    <Button variant="registration-form-btn" onClick={() => {props.changeView(2)}}>
                         Continue
                     </Button>
+                    {/* <Button variant="registration-form-btn" onClick={() => {props.changeView('increase')}}>
+                        Continue
+                    </Button> */}
                 </div>
                 <div className="progress-div">
                     <div className="progress-one-div">
