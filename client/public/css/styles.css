@@ -1,0 +1,5 @@
+@import "./forms/registration/RegistrationForm.css";
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
