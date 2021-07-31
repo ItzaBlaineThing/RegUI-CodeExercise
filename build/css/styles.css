@@ -1,0 +1,6 @@
+@import "./forms/registration/RegistrationForm.css";
+@import "./forms/registration/progressBar/ProgressBar.css";
+
+* {
+    font-family: 'Roboto', sans-serif;
+}

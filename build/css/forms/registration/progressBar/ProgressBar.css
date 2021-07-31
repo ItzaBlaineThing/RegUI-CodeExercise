@@ -1,0 +1,64 @@
+/* || Progress Bar */
+
+.progress-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-bottom: 4rem;
+}
+
+.progress-div-text {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%);
+    word-spacing: 100vw;
+}
+
+.active {
+    color: #F0A83A;
+    font-weight: 400;
+}
+
+.disabled {
+    color: #f0a73a70;
+    font-weight: 300;
+}
+
+.progress-one-div, .progress-two-div, .progress-three-div {
+    position: relative;
+}
+
+.progress-circle {
+    background-color: #FFFFFF;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #5F5A5A;
+    border-radius: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.progress-circle-middle {
+    margin: 0 15rem;
+    position: relative;
+    z-index: 2;
+}
+
+.current {
+    background-color: #5D85B4;
+}
+
+.visited {
+    background-color: #F0A83A;
+}
+
+hr {
+    margin: -12px 0 0 0;
+    position: relative;
+    border-top: 1px solid #5F5A5A;
+    z-index: 1;
+}
