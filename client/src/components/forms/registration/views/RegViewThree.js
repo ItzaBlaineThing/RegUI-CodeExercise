@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Import React-Bootstrap
 import Container from 'react-bootstrap/Container';
@@ -11,6 +11,18 @@ import Button from 'react-bootstrap/Button';
 import ProgressBar from '../progressBar/ProgressBar';
 
 export default function RegViewThree(props) {
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    function changeChecked() {
+        // if (isChecked !== false) {
+        //     setIsChecked(false);
+        // } else {
+        //     setIsChecked(true);
+        // }
+        // Using ternary operator to condense if/else statement above
+        isChecked ? setIsChecked(false) : setIsChecked(true);
+    }
 
     if (props.currentView !== 3) {
         return null
@@ -64,7 +76,7 @@ export default function RegViewThree(props) {
                     </Row>
                 </Container>
                 <div className="registration-form-checkbox-div">
-                    <Form.Check type="checkbox" label="I agree to the terms and conditions" />
+                    <Form.Check type="checkbox" label="I agree to the terms and conditions" onClick={changeChecked} />
                 </div>
                 <div className="registration-form-btn-div">
                 <Container className="registration-form-btn-container">
@@ -75,9 +87,15 @@ export default function RegViewThree(props) {
                                 </Button>
                             </Col>
                             <Col>
+                            {isChecked ? 
                                 <Button variant="registration-form-btn" type="submit">
                                     Submit
                                 </Button>
+                            :
+                                <Button variant="registration-form-btn registration-form-btn-disabled" type="submit" disabled>
+                                    Submit
+                                </Button>
+                            }
                             </Col>
                         </Row>
                     </Container>

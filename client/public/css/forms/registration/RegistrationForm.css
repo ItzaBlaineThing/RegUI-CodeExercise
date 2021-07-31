@@ -108,6 +108,10 @@
     color: #FFFFFF;
 }
 
+.registration-form-btn-disabled:hover {
+    background-color: #5D85B4;
+}
+
 .btn-registration-form-btn-alt {
     background-color: #77797B;
 }
