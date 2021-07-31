@@ -19,30 +19,53 @@ export default function RegViewThree(props) {
             <div>
                 <h1 className="registration-form-title">Time to review!</h1>
                 <h5 className="registration-form-subtitle">How does everything look?</h5>
-                <Form.Group className="registration-form-group">
-                    <Form.Label>First Name</Form.Label>
-                    <Form.Text>{props.form.firstName}</Form.Text>
-                </Form.Group>
-                <Form.Group className="registration-form-group">
-                    <Form.Label>Last Name</Form.Label>
-                    <Form.Text>{props.form.lastName}</Form.Text>
-                </Form.Group>
-                <Form.Group className="registration-form-group">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Text>{props.form.email}</Form.Text>
-                </Form.Group>
-                <Form.Group className="registration-form-group">
-                    <Form.Label>NPI Number</Form.Label>
-                    <Form.Text>{props.form.npiNumber}</Form.Text>
-                </Form.Group>
-                <Form.Group className="registration-form-group">
-                    <Form.Label>Phone Number</Form.Label>
-                    <Form.Text>{props.form.phoneNumber}</Form.Text>
-                </Form.Group>
-                <Form.Group className="registration-form-group">
-                    <Form.Label>Business Address</Form.Label>
-                    <Form.Text>{props.form.address}</Form.Text>
-                </Form.Group>
+                <Container className="registration-form-container">
+                    <Row>
+                        <Col>
+                            <Form.Group className="registration-form-group review">
+                                <Form.Label className="registration-form-label">First Name</Form.Label>
+                                <Form.Text className="registration-form-text">{props.form.firstName}</Form.Text>
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="registration-form-group review">
+                                <Form.Label className="registration-form-label">Last Name</Form.Label>
+                                <Form.Text className="registration-form-text">{props.form.lastName}</Form.Text>
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <Form.Group className="registration-form-group review">
+                                <Form.Label className="registration-form-label">Email</Form.Label>
+                                <Form.Text className="registration-form-text">{props.form.email}</Form.Text>
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="registration-form-group review">
+                                <Form.Label className="registration-form-label">NPI Number</Form.Label>
+                                <Form.Text className="registration-form-text">{props.form.npiNumber}</Form.Text>
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <Form.Group className="registration-form-group review">
+                                <Form.Label className="registration-form-label">Phone Number</Form.Label>
+                                <Form.Text className="registration-form-text">{props.form.phoneNumber}</Form.Text>
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="registration-form-group review">
+                                <Form.Label className="registration-form-label">Business Address</Form.Label>
+                                <Form.Text className="registration-form-text">{props.form.address}</Form.Text>
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                </Container>
+                <div className="registration-form-checkbox-div">
+                    <Form.Check type="checkbox" label="I agree to the terms and conditions" />
+                </div>
                 <div className="registration-form-btn-div">
                 <Container className="registration-form-btn-container">
                         <Row>

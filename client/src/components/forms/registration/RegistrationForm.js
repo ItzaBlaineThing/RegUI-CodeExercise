@@ -12,12 +12,12 @@ export default function RegistrationForm() {
 
     // Setting initial state
     const [form, setForm] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        address: "",
-        phoneNumber: "",
-        npiNumber: ""
+        firstName: "Chandler",
+        lastName: "Morris",
+        email: "itzablainething@gmail.com",
+        address: "515 Dry Branch Way",
+        phoneNumber: "999-999-9999",
+        npiNumber: "9999999999"
     });
 
     // Function to handle changes and update local state values
@@ -36,7 +36,7 @@ export default function RegistrationForm() {
     }
 
     // Setting state to track the currentView
-    const [currentView, setCurrentView] = useState(1);
+    const [currentView, setCurrentView] = useState(3);
 
     // Function to update the currentView
     function changeView(viewSelected) {
