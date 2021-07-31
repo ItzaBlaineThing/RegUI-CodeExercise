@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Import React-Bootstrap
 import Form from 'react-bootstrap/Form';
@@ -8,8 +8,6 @@ import Button from 'react-bootstrap/Button';
 import ProgressBar from '../progressBar/ProgressBar';
 
 export default function RegViewOne(props) {
-
-    console.log(props);
 
     if (props.currentView !== 1) {
         return null
@@ -31,9 +29,15 @@ export default function RegViewOne(props) {
                     <Form.Control type="email" className="registration-form-input" placeholder="Email" name="email" onChange={props.handleChange} value={props.form.email} />
                 </Form.Group>
                 <div className="registration-form-btn-div">
-                    <Button variant="registration-form-btn" onClick={() => {props.changeView(2)}}>
-                        Continue
-                    </Button>
+                    {props.isComplete.viewOne ?
+                        <Button variant="registration-form-btn" onClick={() => {props.changeView(2)}}>
+                            Continue
+                        </Button>
+                    :
+                        <Button variant="registration-form-btn registration-form-btn-disabled" disabled>
+                            Continue
+                        </Button>
+                    }
                 </div>
                 <ProgressBar circleOne={"current"} circleTwo={""} circleThree={""} textOne={"active"} textTwo={"disabled"} textThree={"disabled"}/>
             </div>

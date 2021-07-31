@@ -12,16 +12,22 @@ export default function RegistrationForm() {
 
     // Setting initial state
     const [form, setForm] = useState({
-        firstName: "Chandler",
-        lastName: "Morris",
-        email: "itzablainething@gmail.com",
-        address: "515 Dry Branch Way",
-        phoneNumber: "999-999-9999",
-        npiNumber: "9999999999"
+        firstName: "",
+        lastName: "",
+        email: "",
+        address: "",
+        phoneNumber: "",
+        npiNumber: ""
+    });
+
+    const [isComplete, setIsComplete] = useState({
+        viewOne: false,
+        viewTwo: false
     });
 
     // Function to handle changes and update local state values
     function handleChange(event) {
+
         // Destructure the name and value of the event.target
         const {name, value} = event.target;
         // Calling setForm to update the local state value for form.[key]
@@ -33,10 +39,42 @@ export default function RegistrationForm() {
                 [name]: value
             }
         });
+
+        if (form.firstName.length && form.lastName.length && form.email.length > 0) {
+            setIsComplete((prevValue) => {
+                return {
+                    ...prevValue,
+                    viewOne: true
+                }
+            });
+        } else {
+            setIsComplete((prevValue) => {
+                return {
+                    ...prevValue,
+                    viewOne: false
+                }
+            });
+        }
+
+        if (form.address.length && form.phoneNumber.length && form.npiNumber.length > 0) {
+            setIsComplete((prevValue) => {
+                return {
+                    ...prevValue,
+                    viewTwo: true
+                }
+            });
+        } else {
+            setIsComplete((prevValue) => {
+                return {
+                    ...prevValue,
+                    viewTwo: false
+                }
+            });
+        }
     }
 
     // Setting state to track the currentView
-    const [currentView, setCurrentView] = useState(3);
+    const [currentView, setCurrentView] = useState(1);
 
     // Function to update the currentView
     function changeView(viewSelected) {
@@ -48,8 +86,8 @@ export default function RegistrationForm() {
         <div className="registration-form-div">
             <Form className="registration-form">
                 <h2 id="brand">Availity</h2>
-                <RegViewOne form={form} handleChange={handleChange} currentView={currentView} changeView={changeView} />
-                <RegViewTwo form={form} handleChange={handleChange} currentView={currentView} changeView={changeView} />
+                <RegViewOne form={form} handleChange={handleChange} currentView={currentView} changeView={changeView} isComplete={isComplete} />
+                <RegViewTwo form={form} handleChange={handleChange} currentView={currentView} changeView={changeView} isComplete={isComplete} />
                 <RegViewThree form={form} handleChange={handleChange} currentView={currentView} changeView={changeView} />
             </Form>
         </div>

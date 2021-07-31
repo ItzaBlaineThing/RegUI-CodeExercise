@@ -40,9 +40,15 @@ export default function RegViewTwo(props) {
                                 </Button>
                             </Col>
                             <Col>
+                            {props.isComplete.viewTwo ?
                                 <Button variant="registration-form-btn" type="button" onClick={() => {props.changeView(3)}}>
                                     Continue
                                 </Button>
+                            :
+                                <Button variant="registration-form-btn registration-form-btn-disabled" disabled>
+                                    Continue
+                                </Button>
+                            }
                             </Col>
                         </Row>
                     </Container>
