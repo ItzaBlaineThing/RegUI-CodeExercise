@@ -4,6 +4,9 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+// Import Custom Components
+import ProgressBar from '../progressBar/ProgressBar';
+
 export default function RegViewOne(props) {
 
     console.log(props);
@@ -32,21 +35,7 @@ export default function RegViewOne(props) {
                         Continue
                     </Button>
                 </div>
-                <div className="progress-div">
-                    <div className="progress-one-div">
-                        <div className="progress-circle current"></div>
-                        <h5 className="progress-div-text active">User Information</h5>
-                    </div>
-                    <div className="progress-two-div">
-                        <div className="progress-circle progress-circle-middle"></div>
-                        <hr />
-                        <h5 className="progress-div-text disabled">Organization Information</h5>
-                    </div>
-                    <div className="progress-three-div">
-                        <div className="progress-circle"></div>
-                        <h5 className="progress-div-text disabled">Review Information</h5>
-                    </div>
-                </div>
+                <ProgressBar circleOne={"current"} circleTwo={""} circleThree={""} textOne={"active"} textTwo={"disabled"} textThree={"disabled"}/>
             </div>
         )
     }

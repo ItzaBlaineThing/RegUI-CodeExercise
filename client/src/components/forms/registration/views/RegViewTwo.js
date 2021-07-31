@@ -7,6 +7,9 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+// Import Custom Components
+import ProgressBar from '../progressBar/ProgressBar';
+
 export default function RegViewTwo(props) {
 
     if (props.currentView !== 2) {
@@ -44,21 +47,7 @@ export default function RegViewTwo(props) {
                         </Row>
                     </Container>
                 </div>
-                <div className="progress-div">
-                    <div className="progress-one-div">
-                        <div className="progress-circle visited"></div>
-                        <h5 className="progress-div-text disabled">User Information</h5>
-                    </div>
-                    <div className="progress-two-div">
-                        <div className="progress-circle progress-circle-middle current"></div>
-                        <hr />
-                        <h5 className="progress-div-text active">Organization Information</h5>
-                    </div>
-                    <div className="progress-three-div">
-                        <div className="progress-circle"></div>
-                        <h5 className="progress-div-text disabled">Review Information</h5>
-                    </div>
-                </div>
+                <ProgressBar circleOne={"visited"} circleTwo={"current"} circleThree={""} textOne={"disabled"} textTwo={"active"} textThree={"disabled"}/>
             </div>
         )
     }
