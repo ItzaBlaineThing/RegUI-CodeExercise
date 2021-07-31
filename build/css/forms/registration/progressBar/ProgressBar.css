@@ -12,10 +12,14 @@
     text-align: center;
     font-size: 1rem;
     margin: 0;
+
+    /* Setting the position of the registration-form to the center of the screen */
     position: absolute;
     left: 50%;
     top: 100%;
     transform: translate(-50%);
+
+    /* Setting word-spacing to a large value to force word-break with desired behavior */
     word-spacing: 100vw;
 }
 
@@ -45,6 +49,7 @@
 .progress-circle-middle {
     margin: 0 15rem;
     position: relative;
+    /* Setting z-index higher then the hr element so the line goes behind the middle circle*/
     z-index: 2;
 }
 
@@ -60,5 +65,6 @@ hr {
     margin: -12px 0 0 0;
     position: relative;
     border-top: 1px solid #5F5A5A;
+    /* Setting z-index higher then the hr element so the line goes behind the middle circle*/
     z-index: 1;
 }

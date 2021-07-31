@@ -9,6 +9,7 @@
     background-color: #FFFFFF;
     border-radius: 10px;
 
+    /* Setting the position of the registration-form to the center of the screen */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,12 +79,10 @@
 }
 
 .registration-form-btn-container {
-    /* background-color: palegreen; */
     padding: 0 15rem;
 }
 
 .registration-form-container {
-    /* background-color: palegreen; */
     padding: 0 8rem;
 }
 
