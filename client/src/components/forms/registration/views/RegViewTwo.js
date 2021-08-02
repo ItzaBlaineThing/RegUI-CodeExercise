@@ -58,12 +58,12 @@ export default function RegViewTwo(props) {
                     {/* Use a Container, Rows, and Columns to layout the buttons */}
                     <Container className="registration-form-btn-container">
                         <Row>
-                            <Col>
+                            <Col md={6}>
                                 <Button variant="registration-form-btn-alt" type="button" onClick={() => {props.changeView(1)}}>
                                     Back
                                 </Button>
                             </Col>
-                            <Col>
+                            <Col md={6}>
                             {/* Conditional Rendering Logic, if the isComplete state prop is true, display the button that will let them continue, else display the disabled button */}
                             {props.isComplete.viewTwo ?
                                 <Button variant="registration-form-btn" type="button" onClick={() => {props.changeView(3)}}>

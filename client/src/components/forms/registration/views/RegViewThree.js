@@ -115,12 +115,12 @@ export default function RegViewThree(props) {
                 <div className="registration-form-btn-div">
                 <Container className="registration-form-btn-container">
                         <Row>
-                            <Col>
+                            <Col md={6}>
                                 <Button variant="registration-form-btn-alt" type="button" onClick={() => {props.changeView(2)}}>
                                     Back
                                 </Button>
                             </Col>
-                            <Col>
+                            <Col md={6}>
                             {/* Conditional Rendering Logic, if the isComplete state prop is true, display the button that will let them submit, else display the disabled button */}
                             {isChecked ? 
                                 <Button variant="registration-form-btn" type="submit">
