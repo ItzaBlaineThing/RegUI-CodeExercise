@@ -87,10 +87,13 @@ hr {
 
 /* Mobile Breakpoint */
 @media (max-width: 480px) {
-    .progress-circle-middle {
-        margin: 0 6rem;
-    }
-    .progress-div {
+    .progress-div-text {
+        font-size: 0.8rem;
+      }
+      .progress-circle-middle {
+        margin: 0 4rem;
+      }
+      .progress-div {
         margin: 2rem 0 4rem;
-    }
+      }
 }
