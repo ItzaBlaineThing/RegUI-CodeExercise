@@ -21,6 +21,11 @@ app.get("/", (req, res) => {
     res.send("Up and Running!")
 });
 
+// React Routes
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+
 app.listen(port, () => {
     console.log("Server running on port " + port);
 });
