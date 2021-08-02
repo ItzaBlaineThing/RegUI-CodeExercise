@@ -68,3 +68,32 @@ hr {
     /* Setting z-index higher then the hr element so the line goes behind the middle circle*/
     z-index: 1;
 }
+
+/* Large Screen Breakpoint */
+@media (min-width: 1025px) {
+    
+}
+
+/* Laptop Breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 481px) and (max-width: 768px) {
+    .progress-circle-middle {
+        margin: 0 10rem;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 480px) {
+    .progress-div-text {
+        font-size: 0.8rem;
+      }
+      .progress-circle-middle {
+        margin: 0 4rem;
+      }
+      .progress-div {
+        margin: 2rem 0 4rem;
+      }
+}
